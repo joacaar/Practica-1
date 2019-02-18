@@ -1,0 +1,7 @@
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe.config
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.exe
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\bin\Debug\Torres_de_Hanoi.pdb
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csprojAssemblyReference.cache
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.csproj.CoreCompileInputs.cache
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.exe
+C:\Users\JoanCalabuig96\Desktop\GTI 2\Semestre B\Algoritmica\Practicas\Practica-1\torres-de-hanoi-master\Torres_de_Hanoi\obj\Debug\Torres_de_Hanoi.pdb

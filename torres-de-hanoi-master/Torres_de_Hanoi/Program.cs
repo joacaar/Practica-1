@@ -11,8 +11,10 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
 
+            Pila Inicio = new Pila(3);
+
             // Keep the console window open in debug mode.
-            Console.WriteLine("Press any key to exit.");
+            Console.WriteLine("Press any key exit.");
             Console.ReadKey();
         }
     }
