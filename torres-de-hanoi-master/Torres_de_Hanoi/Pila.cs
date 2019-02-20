@@ -13,6 +13,8 @@ namespace Torres_de_Hanoi
         public int Top { get; set; }
 
         public List<Disco> Elementos { get; set; }
+
+        public string nombre;
         
 
         /* TODO: Implementar métodos */
@@ -43,44 +45,87 @@ namespace Torres_de_Hanoi
             
         }
 
-        // Añadir un disco a la pila, Si el disco es de menor tamaño que el que se encuentra en la pila,
-        //se podra poner, si la pila esta vacia se podra poner, si el disco que se encuentra es menor que el que se va aintroducir no hara nada
         public void push(Disco d)
         {
-            Console.WriteLine("Inicio del Push");
+            Elementos.Insert(0, d);
+            Size++;
+            Top = Elementos[0].Valor;
+        }
 
+ 
+
+        public Disco pop()
+        {
+            Disco aux = new Disco();
+            //aux.Valor = Elementos[0].Valor;
+            aux.Valor = this.Top;
+
+            Elementos.RemoveAt(0);
+            Size--;
             if (isEmpty())
             {
-                Elementos.Insert(0, d);
-                Size = Elementos.Count;
-                Top = Elementos[Size-1].Valor;
-                
-            }
-            else if (Elementos[0].Valor > (d.Valor))
-            {
-                Elementos.Insert(0, d);
-                Size = Elementos.Count;
-                Top = Elementos[Size - 1].Valor;
-
+                this.Top = 0;
             }
             else
             {
-                Console.WriteLine("Movimiento no válido");
-                return;
+                this.Top = Elementos[0].Valor;
             }
+            
 
-            for (int i = 0; i < Size; i++)
-            {
-                Console.WriteLine("Elemento en: " + i + " : " + Elementos[i].Valor);
-            }
-
-            Console.WriteLine("Fin del Push");
-
-            Console.WriteLine("---------------------------------------------------");
-
-
+            return aux;
         }
 
+
+        public bool isEmpty()
+        {
+            if (Elementos.Count.Equals(0))
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+}
+
+// Añadir un disco a la pila, Si el disco es de menor tamaño que el que se encuentra en la pila,
+//se podra poner, si la pila esta vacia se podra poner, si el disco que se encuentra es menor que el que se va aintroducir no hara nada
+/*       public void push(Disco d)
+       {
+           Console.WriteLine("Inicio del Push");
+
+           if (isEmpty())
+           {
+               Elementos.Insert(0, d);
+               Size = Elementos.Count;
+               Top = Elementos[Size-1].Valor;
+
+           }
+           else if (Elementos[0].Valor > (d.Valor))
+           {
+               Elementos.Insert(0, d);
+               Size = Elementos.Count;
+               Top = Elementos[Size - 1].Valor;
+
+           }
+           else
+           {
+               Console.WriteLine("Movimiento no válido");
+               return;
+           }
+
+           for (int i = 0; i < Size; i++)
+           {
+               Console.WriteLine("Elemento en: " + i + " : " + Elementos[i].Valor);
+           }
+
+           Console.WriteLine("Fin del Push");
+
+           Console.WriteLine("---------------------------------------------------");
+
+
+       }
+       */
+/*
         public Disco pop()
         {
             Console.WriteLine("En la funcion POP");
@@ -113,15 +158,4 @@ namespace Torres_de_Hanoi
 
             return null;
         }                
-
-        public bool isEmpty()
-        {
-            if (Elementos.Count.Equals(0))
-            {
-                return true;
-            }
-            return false;
-        }
-
-    }
-}
+*/
