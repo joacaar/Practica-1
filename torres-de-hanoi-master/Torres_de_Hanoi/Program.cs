@@ -11,7 +11,7 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
 
-            int numDiscos = 10;
+            int numDiscos = 4;
             Hanoi hanoi = new Hanoi();
 
             Pila Aux = new Pila();
@@ -23,22 +23,23 @@ namespace Torres_de_Hanoi
 
             Console.WriteLine("Inicio de partida --------------------------------");
 
-            hanoi.mostrarMovimiento(Inicio);
-            hanoi.mostrarMovimiento(Aux);
-            hanoi.mostrarMovimiento(Fin);
+            hanoi.mostrarPila(Inicio);
+            hanoi.mostrarPila(Aux);
+            hanoi.mostrarPila(Fin);
 
 
             Console.WriteLine("---------------------------------------------------");
 
             //hanoi.iterativo(3,Inicio, Fin, Aux);
 
+
+            int mov = hanoi.recursivo(numDiscos, Inicio, Fin, Aux);
+
             Console.WriteLine("Fin de partida --------------------------------");
 
-            int mov = hanoi.iterativo(numDiscos, Inicio, Fin, Aux);
-
-            hanoi.mostrarMovimiento(Inicio);
-            hanoi.mostrarMovimiento(Aux);
-            hanoi.mostrarMovimiento(Fin);
+            hanoi.mostrarPila(Inicio);
+            hanoi.mostrarPila(Aux);
+            hanoi.mostrarPila(Fin);
             Console.WriteLine("Total movimientos : " + mov);
             Console.WriteLine("------------------------------------------------");
 

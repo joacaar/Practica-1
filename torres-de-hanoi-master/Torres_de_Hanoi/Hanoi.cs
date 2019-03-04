@@ -72,18 +72,21 @@ namespace Torres_de_Hanoi
                         return m;
                     }
                     mover_disco(ini, fin);
+                    mostrarMovimiento(ini, fin);
                     m++;
                     if (fin.Size.Equals(n))
                     {
                         return m;
                     }
                     mover_disco(ini, aux);
+                    mostrarMovimiento(ini, aux);
                     m++;
                     if (fin.Size.Equals(n))
                     {
                         return m;
                     }
                     mover_disco(aux, fin);
+                    mostrarMovimiento(aux, fin);
                     m++;
                 }
             }
@@ -96,36 +99,72 @@ namespace Torres_de_Hanoi
                         return m;
                     }
                     mover_disco(ini, aux);
+                    mostrarMovimiento(ini, aux);
                     m++;
                     if (fin.Size.Equals(n))
                     {
                         return m;
                     }
                     mover_disco(ini, fin);
+                    mostrarMovimiento(ini, fin);
                     m++;
                     if (fin.Size.Equals(n))
                     {
                         return m;
                     }
                     mover_disco(aux, fin);
+                    mostrarMovimiento(aux, fin);
                     m++;
                 }
             }
         }
 
-        public void mostrarMovimiento(Pila aux)
+        public void mostrarPila(Pila aux)
         {
-            for (int i = 0; i < aux.Size; i++)
+            if (aux.isEmpty())
             {
-                if (aux.isEmpty())
-                {
-                    Console.WriteLine("Torre  " + aux.nombre + " : " + "-----" + "Vacia");
-                }
-                else
-                {
-                    Console.WriteLine("Torre  " + aux.nombre + " : "+ aux.Elementos[i].Valor);
-                }
+                Console.WriteLine("Torre  " + aux.nombre + " : " + "-----" + "Vacia");
+                return;
             }
+
+            for (int i = 0; i <= aux.Size-1; i++)
+            { 
+                    Console.WriteLine("Torre  " + aux.nombre + " : "+ aux.Elementos[i].Valor);
+            }
+        }
+
+        public void mostrarMovimiento(Pila a, Pila b)
+        {
+            Console.WriteLine("---------------------------");
+            mostrarPila(a);
+            mostrarPila(b);
+            Console.WriteLine("---------------------------");
+
+        }
+
+        public int recursivo (int n, Pila ini, Pila fin, Pila aux)
+        {
+
+            int m=0;
+
+            if (n == 1)
+            {
+                Disco inter;
+                inter = ini.pop();
+                fin.push(inter);
+                m++;
+                
+            }
+            else
+            {
+                m += recursivo(n - 1, ini, aux, fin);
+                Disco inter = ini.pop();
+                fin.push(inter);
+                m++;
+                m += recursivo(n - 1, aux, fin, ini);
+                
+            }
+            return m;
         }
     }
 }
