@@ -11,7 +11,7 @@ namespace Torres_de_Hanoi
         static void Main(string[] args)
         {
 
-            int numDiscos = 4;
+            int numDiscos = 5;
             Hanoi hanoi = new Hanoi();
 
             Pila Aux = new Pila();
